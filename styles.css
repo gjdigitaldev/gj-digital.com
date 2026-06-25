@@ -128,12 +128,12 @@ a:hover { text-decoration: underline; }
 .footer a { font-size: 14px; }
 
 /* ---- Nav links ---- */
-.nav-links { display: flex; align-items: center; gap: 24px; }
+.nav-links { display: none; align-items: center; gap: 24px; }
 .nav-links > a:not(.nav-cta) { font-size: 15px; font-weight: 500; color: var(--text); }
 .nav-links > a:not(.nav-cta):hover { text-decoration: none; color: var(--blue); }
 
-/* ---- Hamburger menu (collapses to this on narrow screens) ---- */
-.nav details.menu { display: none; position: relative; }
+/* ---- Hamburger menu (always shown — the single nav on every width) ---- */
+.nav details.menu { display: block; position: relative; }
 .nav details.menu summary {
   list-style: none; cursor: pointer;
   width: 44px; height: 38px;
@@ -223,7 +223,5 @@ article a { color: var(--blue); }
 @media (max-width: 560px) {
   .footer .wrap { flex-direction: column; text-align: center; gap: 8px; }
   .hero { padding: 80px 0 64px; }
-  .nav-links { display: none; }
-  .nav details.menu { display: block; }
   .project { flex-direction: column; align-items: flex-start; gap: 16px; }
 }
