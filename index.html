@@ -16,7 +16,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
 <link rel="icon" type="image/png" sizes="64x64" href="/assets/icon-64.png">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
-<link rel="stylesheet" href="/styles.css?v=2">
+<link rel="stylesheet" href="/styles.css?v=3">
 </head>
 <body>
 
@@ -26,7 +26,11 @@
       <img class="mark" src="/assets/icon.svg" width="34" height="34" alt="" aria-hidden="true">
       <span class="brand-text">GJ&nbsp;Digital</span>
     </a>
-    <a class="nav-cta" href="mailto:info@gj-digital.com">Contact</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a class="nav-cta" href="mailto:info@gj-digital.com">Contact</a>
+    </nav>
   </div>
 </header>
 
@@ -43,14 +47,14 @@
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="mailto:info@gj-digital.com">Get in touch</a>
-        <a class="btn btn-ghost" href="#work">What we do</a>
+        <a class="btn btn-ghost" href="#services">Our services</a>
       </div>
     </div>
   </section>
 
-  <section id="work" class="section">
+  <section id="services" class="section">
     <div class="wrap">
-      <h2>What we do</h2>
+      <h2>Services</h2>
       <p class="section-lead">
         From first sketch to shipping on the App Store, we handle the
         full lifecycle of an app — product design, engineering, and the
@@ -62,7 +66,7 @@
           <p>Built with Swift and SwiftUI for iPhone, iPad, and Apple&nbsp;TV — with companion apps for Mac and Windows when a product needs them.</p>
         </div>
         <div class="card">
-          <h3>Product design</h3>
+          <h3>Product &amp; UI design</h3>
           <p>Clean, intuitive interfaces designed around how people actually use them — accessible, responsive, and at home on every screen.</p>
         </div>
         <div class="card">
@@ -74,10 +78,37 @@
           <p>End-to-end delivery — architecture, implementation, testing, submission, and ongoing support after launch.</p>
         </div>
       </div>
+      <ul class="svc-list" aria-label="What we offer">
+        <li>iPhone &amp; iPad apps</li>
+        <li>Apple&nbsp;TV apps</li>
+        <li>Mac &amp; Windows companion apps</li>
+        <li>UI/UX &amp; product design</li>
+        <li>Video, streaming &amp; DVR engineering</li>
+        <li>Backend &amp; companion-server development</li>
+        <li>App&nbsp;Store submission &amp; review support</li>
+        <li>Maintenance, updates &amp; ongoing support</li>
+      </ul>
     </div>
   </section>
 
-  <section id="contact" class="section section-alt">
+  <section id="work" class="section section-alt">
+    <div class="wrap">
+      <h2>Selected work</h2>
+      <p class="section-lead">
+        A look at what we build. More available on request.
+      </p>
+      <a class="project" href="https://givostreamapp.com" target="_blank" rel="noopener">
+        <div class="project-body">
+          <h3>GiVo Stream</h3>
+          <p class="project-meta">Media player &middot; iPhone &middot; iPad &middot; Apple&nbsp;TV &middot; Mac &amp; Windows companion</p>
+          <p>A modern media player with a beautiful program guide, pause &amp; rewind on live streams, and a DVR companion server for Mac and Windows.</p>
+        </div>
+        <span class="project-link">givostreamapp.com&nbsp;&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
     <div class="wrap contact">
       <h2>Get in touch</h2>
       <p class="section-lead">
