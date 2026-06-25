@@ -40,11 +40,8 @@ a:hover { text-decoration: underline; }
 .brand { display: flex; align-items: center; gap: 12px; color: var(--text); }
 .brand:hover { text-decoration: none; }
 .mark {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 34px; height: 34px; border-radius: 9px;
-  background: var(--accent-grad); color: #fff;
-  font-weight: 700; font-size: 14px; letter-spacing: 0.5px;
-  box-shadow: var(--shadow-sm);
+  display: block; width: 34px; height: 34px;
+  border-radius: 9px; box-shadow: var(--shadow-sm);
 }
 .brand-text { font-weight: 600; font-size: 18px; letter-spacing: -0.01em; }
 .nav-cta {
