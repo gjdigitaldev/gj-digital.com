@@ -122,6 +122,40 @@ a:hover { text-decoration: underline; }
 .nav-links > a:not(.nav-cta) { font-size: 15px; font-weight: 500; color: var(--text); }
 .nav-links > a:not(.nav-cta):hover { text-decoration: none; color: var(--blue); }
 
+/* ---- Hamburger menu (collapses to this on narrow screens) ---- */
+.nav details.menu { display: none; position: relative; }
+.nav details.menu summary {
+  list-style: none; cursor: pointer;
+  width: 44px; height: 38px;
+  display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+  border: 1px solid var(--line); border-radius: 11px; background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+.nav details.menu summary::-webkit-details-marker { display: none; }
+.nav details.menu summary::marker { content: ""; }
+.nav details.menu summary span {
+  display: block; width: 18px; height: 2px; border-radius: 2px; background: var(--text);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+.nav details.menu[open] summary span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav details.menu[open] summary span:nth-child(2) { opacity: 0; }
+.nav details.menu[open] summary span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+@keyframes ddIn {
+  from { opacity: 0; transform: translateY(-6px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.nav .dropdown {
+  animation: ddIn 0.18s ease; transform-origin: top right;
+  position: absolute; right: 0; top: calc(100% + 10px);
+  background: #fff; border: 1px solid var(--line); border-radius: 16px;
+  box-shadow: var(--shadow-lg); min-width: 220px; padding: 8px; z-index: 60;
+}
+.nav .dropdown a {
+  display: block; padding: 12px 15px; border-radius: 10px;
+  color: var(--text); font-weight: 500; font-size: 15px;
+}
+.nav .dropdown a:hover { background: var(--bg-alt); color: var(--blue); text-decoration: none; }
+
 /* ---- Services list ---- */
 .svc-list {
   list-style: none; margin: 36px auto 0; max-width: 760px;
@@ -159,7 +193,7 @@ a:hover { text-decoration: underline; }
 @media (max-width: 560px) {
   .footer .wrap { flex-direction: column; text-align: center; gap: 8px; }
   .hero { padding: 80px 0 64px; }
-  .nav-links { gap: 14px; }
-  .nav-links > a:not(.nav-cta) { display: none; }
+  .nav-links { display: none; }
+  .nav details.menu { display: block; }
   .project { flex-direction: column; align-items: flex-start; gap: 16px; }
 }

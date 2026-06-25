@@ -16,7 +16,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
 <link rel="icon" type="image/png" sizes="64x64" href="/assets/icon-64.png">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
-<link rel="stylesheet" href="/styles.css?v=4">
+<link rel="stylesheet" href="/styles.css?v=5">
 </head>
 <body>
 
@@ -31,6 +31,14 @@
       <a href="/projects.html">Projects</a>
       <a class="nav-cta" href="mailto:info@gj-digital.com">Contact</a>
     </nav>
+    <details class="menu">
+      <summary aria-label="Menu"><span></span><span></span><span></span></summary>
+      <div class="dropdown">
+        <a href="/#services">Services</a>
+        <a href="/projects.html">Projects</a>
+        <a href="mailto:info@gj-digital.com">Contact</a>
+      </div>
+    </details>
   </div>
 </header>
 
@@ -80,6 +88,17 @@
   </div>
 </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+document.querySelectorAll("details.menu .dropdown a").forEach(function (a) {
+  a.addEventListener("click", function () {
+    a.closest("details").removeAttribute("open");
+  });
+});
+document.addEventListener("click", function (e) {
+  var d = document.querySelector("details.menu[open]");
+  if (d && !d.contains(e.target)) d.removeAttribute("open");
+});
+</script>
 </body>
 </html>
