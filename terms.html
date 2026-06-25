@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Service — GJ Digital</title>
+<meta name="description" content="Terms of service for the GJ Digital LLC website (gj-digital.com).">
+<meta name="author" content="GJ Digital LLC">
+<meta property="og:title" content="Terms of Service — GJ Digital">
+<meta property="og:description" content="Terms of service for the GJ Digital LLC website.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gj-digital.com/terms.html">
+<meta property="og:image" content="https://gj-digital.com/assets/icon-512.png">
+<meta name="theme-color" content="#fbfbfd">
+<link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/icon-64.png">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="stylesheet" href="/styles.css?v=8">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <img class="brand-logo" src="/assets/gj-digital-logo.png" alt="GJ Digital" height="34">
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/#services">Services</a>
+      <a href="/projects.html">Projects</a>
+      <a class="nav-cta" href="mailto:info@gj-digital.com">Contact</a>
+    </nav>
+    <details class="menu">
+      <summary aria-label="Menu"><span></span><span></span><span></span></summary>
+      <div class="dropdown">
+        <a href="/#services">Services</a>
+        <a href="/projects.html">Projects</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+        <a href="mailto:info@gj-digital.com">Contact</a>
+      </div>
+    </details>
+  </div>
+</header>
+
+<article>
+  <h1>Terms of Service</h1>
+  <p class="updated">Effective June 25, 2026 · Governs your use of the
+  gj-digital.com website, operated by GJ Digital LLC ("we", "us").</p>
+
+  <h2>1. Acceptance</h2>
+  <p>By accessing or using gj-digital.com (the "Site"), you agree to these
+  terms. If you don't agree, please don't use the Site.</p>
+
+  <h2>2. About this Site</h2>
+  <p>The Site is an informational and marketing website about GJ Digital and
+  the software-development services and products we offer. Its content is
+  provided for general information only. Nothing on the Site is an offer,
+  contract, or guarantee of services — any engagement we take on is governed by
+  a separate written agreement between you and us.</p>
+
+  <h2>3. Intellectual property</h2>
+  <p>The Site and its content — including text, layout, graphics, and the
+  GJ&nbsp;Digital name and logo — are owned by GJ Digital LLC or its licensors
+  and are protected by intellectual-property laws. Product names and logos
+  shown on the Site (such as GiVo&nbsp;Stream) are ours; please don't copy,
+  reproduce, or reuse them without our written permission. Any third-party
+  names or marks remain the property of their respective owners.</p>
+
+  <h2>4. Links and our products</h2>
+  <p>The Site may link to our own products and to third-party websites — for
+  example, <a href="https://givostreamapp.com" target="_blank" rel="noopener">givostreamapp.com</a>.
+  Those products and sites have their own terms and privacy policies, which
+  govern your use of them. We aren't responsible for the content or practices
+  of third-party sites.</p>
+
+  <h2>5. No warranty</h2>
+  <p>The Site is provided <strong>"as is" and "as available"</strong>, without
+  warranties of any kind, express or implied, including merchantability,
+  fitness for a particular purpose, and non-infringement. We don't warrant that
+  the Site will be uninterrupted, error-free, or that its information is
+  complete or current.</p>
+
+  <h2>6. Limitation of liability</h2>
+  <p>To the maximum extent permitted by law, GJ Digital LLC will not be liable
+  for any indirect, incidental, special, consequential, or exemplary damages
+  arising from your use of, or inability to use, the Site.</p>
+
+  <h2>7. Changes</h2>
+  <p>We may update the Site and these terms at any time. The current version is
+  always posted here with its effective date. Continuing to use the Site after
+  a change means you accept the updated terms.</p>
+
+  <h2>8. Governing law</h2>
+  <p>These terms are governed by the laws of the State of Florida, United
+  States, without regard to its conflict-of-law rules.</p>
+
+  <h2>Contact</h2>
+  <p>GJ Digital LLC ·
+  <a href="mailto:info@gj-digital.com">info@gj-digital.com</a></p>
+</article>
+
+<footer class="footer">
+  <div class="wrap">
+    <span class="brand-text">GJ&nbsp;Digital&nbsp;LLC</span>
+    <span class="copyright">&copy; <span id="year">2026</span> GJ Digital LLC. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="mailto:info@gj-digital.com">info@gj-digital.com</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+document.querySelectorAll("details.menu .dropdown a").forEach(function (a) {
+  a.addEventListener("click", function () {
+    a.closest("details").removeAttribute("open");
+  });
+});
+document.addEventListener("click", function (e) {
+  var d = document.querySelector("details.menu[open]");
+  if (d && !d.contains(e.target)) d.removeAttribute("open");
+});
+</script>
+</body>
+</html>
