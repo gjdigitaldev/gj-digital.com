@@ -149,6 +149,13 @@ a:hover { text-decoration: underline; }
 .project-body > p:last-child { color: var(--dim); font-size: 15.5px; line-height: 1.55; }
 .project-link { flex: none; font-weight: 600; color: var(--blue); white-space: nowrap; }
 
+/* ---- Sub-page head ---- */
+.page-head { text-align: center; padding: 96px 0 36px; }
+.page-title {
+  font-size: clamp(34px, 5vw, 52px); font-weight: 700;
+  letter-spacing: -0.025em; margin: 14px 0 18px;
+}
+
 @media (max-width: 560px) {
   .footer .wrap { flex-direction: column; text-align: center; gap: 8px; }
   .hero { padding: 80px 0 64px; }
